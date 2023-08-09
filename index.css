@@ -1,0 +1,22 @@
+body{
+    background-color:powderblue;
+}
+
+.heading{
+    text-align: center;
+    color:mediumslateblue;
+    font-style: italic;
+}
+
+.Question{
+    font-size: large;
+    color:black;
+}
+
+.Answer{
+color: blue;
+}
+
+.command{
+    color: red;
+}

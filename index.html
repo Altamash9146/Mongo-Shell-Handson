@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Handson</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <h1 class="heading">* Query Solving  using Mongo Shell *</h1>
+    <hr>
+
+    <h2 class="Question">Q1.Query the collection ""employee"" and list all the documents</h2>
+    <div>
+    <pre class="Answer">→ Command to query the collection of employee:
+    <span class="command">db.employee.find().pretty()</span> 
+    </pre></div>
+    <hr>
+
+    <h2 class="Question">Q2.Query the collection ""employee"" and list the employees who are having salary more than 30000
+    </h2>
+    <div>
+    <pre class="Answer">→ Command to query the collection of employee  who are having salary more than 30000:
+    <span class="command">db.employee.find({"salary":{"$gt":"30000"}}).pretty()</span> 
+    </pre></div>
+    <hr>
+
+    <h2 class="Question">Q3.Query the collection ""employee"" and list the employees who are having experience more than 2 years.
+    </h2>
+    <div>
+    <pre class="Answer">→ Command to query the collection of employee  who are having experience more than 2 years:
+    <span class="command">db.employee.find({"overallExp":{"$gt":"2"}}).pretty()</span> 
+    </pre></div>
+    <hr>
+
+    <h2 class="Question">Q4.Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more than 1 year 
+    </h2>
+    <div>
+    <pre class="Answer">→ Command to query the collection of employee who are graduated after 2015 and having experience more than 1 year:
+    <span class="command">db.employee.find({"yearGrad":{"$gt":"2015"}},
+            {"overallExp":{"$gt":"2"}}).pretty()</span> 
+    </pre></div>
+    <hr>
+
+    <h2 class="Question">Q5.Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000. 
+    </h2>
+    <div>
+    <pre class="Answer">→ Command to query the collection of employee  and update the salary of the employee whose salary is greater than 70000 to 65000. :
+    <span class="command">db.employee.updateMany({"salary":{"$gt":"70000"}},{"$set":{"salary":"90000"}}).pretty()</span> 
+    </pre></div>
+    <hr>
+
+    <h2 class="Question">Q6.Delete all the documents from ""employee"" where last company is Y". 
+    </h2>
+    <div>
+    <pre class="Answer">→ Command to Delete all the documents from ""employee"" where last company is Y"
+    <span class="command">db.employee.deleteMany({"lastcompany":"Y" }).pretty()</span> 
+    </pre></div>
+    <hr>
+
+
+</body>
+</html>
